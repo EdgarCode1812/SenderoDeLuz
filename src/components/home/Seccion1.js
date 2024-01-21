@@ -9,13 +9,13 @@ export default function Seccion1() {
       {/* Carrusel */}
       <Carousel className="carrusel">
         <Carousel.Item>
-          <div className="carousel-content">
+          <div className="carousel-content text-center">
             <h3>¿Sientes Depresión y Soledad?</h3>
             <p>Te ayudamos</p>
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="carousel-content">
+          <div className="carousel-content text-center">
             <h3>¿Problemas de Alcohol y Drogas?</h3>
             <p>Te ayudamos</p>
           </div>
