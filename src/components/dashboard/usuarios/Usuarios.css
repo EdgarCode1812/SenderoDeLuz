@@ -1,0 +1,126 @@
+.row-menu-usuarios {
+    margin-top: 200px;
+}
+
+.card-menu-usuarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #003A70;
+    border-radius: 20px;
+    width: 90%;
+    box-shadow: 0px 0px 10px 2px #1b24318a;
+    transition: transform 0.3s ease;
+}
+
+.card-menu-usuarios:hover {
+    transform: scale(1.05);
+}
+
+.card-menu-usuarios h1 {
+    color: #fff;
+    font-family: 'futura';
+    font-size: 15px;
+}
+
+.no-items{
+    color: #555;
+    font: bold 15px "helvetica neue", helvetica, arial, sans-serif;
+    left: 0;
+    margin: 20px 0 0 0;
+    position: absolute;
+    text-align: center;
+    padding-top: 40px;
+    width: 100%;
+}
+
+/* Estilos agregar usuarios */
+
+.add-user h1 {
+    font-size: 25px;
+    font-family: 'Futura';
+    font-weight: bold;
+    color: #003A70;
+}
+
+.add-user img:hover {
+    transform: scale(1.1);
+}
+
+.form-group-add-user {
+    color: #003A70;
+    font-family: 'Futura';
+    font-weight: 500;
+}
+.form-group-add-user .alert {
+    color: #003A70;
+    font-family: 'Futura';
+    font-size: 13px;
+}
+
+.llisting-add-user {
+    height: 40px;
+    padding: 8px 15px;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #003A70;
+    color: black;
+    background-color: transparent;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+}
+
+.llisting-add-user:focus,
+.llisting-add-user:focus-within {
+    border-color: transparent transparent #003A70 transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.llisting-add-user-pass {
+    position: relative;
+    height: 40px;
+    padding: 8px 15px;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #003A70;    color: black;
+    background-color: transparent;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+}
+
+
+.llisting-add-user-pass:focus,
+.llisting-add-user-pass:focus-within {
+    border-color: transparent transparent #003A70 transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.input-group-append{
+    position: absolute !important;
+    right: 0;
+}
+
+.btn-add-user {
+    border-color: transparent;
+    background-color: #003A70;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Futura';
+    font-weight: 500;
+}
+
+.btn-add-user:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 2px #1b24318a;
+    border-color: transparent;
+    color: white;
+}
+
+.container-buton-add-user {
+    width: 40%;
+}

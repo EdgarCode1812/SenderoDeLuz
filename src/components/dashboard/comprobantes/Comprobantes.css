@@ -1,0 +1,18 @@
+.custom-file-input {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .hidden-file-input input {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Puedes personalizar aún más el diseño según tus necesidades */
+  

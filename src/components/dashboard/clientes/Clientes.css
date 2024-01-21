@@ -1,0 +1,13 @@
+.buton-clientes-facturas h1{
+    color: #fff;
+    font-family: 'futura';
+    font-size: 15px;
+}
+
+.icons-search{
+    cursor: pointer;
+}
+
+.icons-search:hover{
+    transform: scale(1.1);
+}
