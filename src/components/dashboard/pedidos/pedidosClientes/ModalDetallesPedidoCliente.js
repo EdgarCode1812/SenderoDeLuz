@@ -1,8 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Modal, Button, Container, Col, Row } from 'react-bootstrap';
 import '../Pedidos.css'
-import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-import { PdfMakeWrapper, Txt, Columns, Img, Table, Cell } from 'pdfmake-wrapper';
 
 export default function ModalDetallesPedidoCliente({ showModal, closeModalDetalles, detalles, fecha }) {
     const [subTotal, setsubTotal] = useState(0);
@@ -117,109 +115,7 @@ export default function ModalDetallesPedidoCliente({ showModal, closeModalDetall
     };
 
     const generatePDF = async () => {
-        PdfMakeWrapper.setFonts(pdfFonts);
-
-        // Variable para rastrear si la imagen está lista
-        let isImageReady = false;
-
-        try {
-            const pdf = new PdfMakeWrapper();
-
-            // Logo y detalles de la empresa
-            const logoBase64 = await fetchImage("/img/logo.png");
-            console.log(logoBase64);
-
-            // Actualiza la variable isImageReady cuando la imagen está lista
-            isImageReady = true;
-
-            // Agrega la imagen al PDF solo si está lista
-            if (isImageReady) {
-                pdf.add(new Img(logoBase64).build());
-            }
-
-            pdf.add(new Txt('Gelatinas Corona').bold().fontSize(16).alignment('center').end);
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt('¡Más Corona Que Nunca!').bold().fontSize(14).alignment('center').end);
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt('R.F.C.: VACM820529LS4').end);
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt('Calle: ORIENTE 27 No. 573, Col. SAN CARLOS, CP: 94320, ORIZABA, VERACRUZ, MEXICO').end);
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt(`Fecha Pedido: ${fechaFormateada}`).end);
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt('\n').end);
-
-            // Crea la tabla y la agrega al documento
-            const tableBody = [
-                [
-                    new Txt('Cantidad').bold().end,
-                    new Txt('Clave').bold().end,
-                    new Txt('Descripción').bold().end,
-                    new Txt('Descuento').bold().end,
-                    new Txt('Importe').bold().end,
-                ],
-                ...detalles.map((item, index) => [
-                    new Txt(item.cantidad).end,
-                    new Txt(item.producto_clave).end,
-                    new Txt(item.producto_descripcion).end,
-                    new Txt(item.descuento || 0).end,
-                    new Txt(`$ ${parseFloat(item.importe).toLocaleString('es-MX')}`).end,
-                ]),
-            ];
-
-            pdf.add(
-                new Table(tableBody)
-                    .widths(['*', '*', '*', '*', '*']) // Distribuye el ancho por igual
-                    .layout({
-                        hLineWidth: (i, node) => (i === 0 || i === node.table.body.length) ? 1 : 0,
-                        vLineWidth: (i, node) => 0,
-                    })
-                    .end
-            );
-
-            // Agrega la sección de resumen de totales alineada a la derecha
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt('\n').end);
-            pdf.add(
-                new Columns([
-                    new Txt('Subtotal').end,
-                    `$ ${parseFloat(subTotal).toLocaleString('es-MX')}`
-                ]).columnGap(10).alignment('right').end
-            );
-
-            pdf.add(
-                new Columns([
-                    new Txt('Descuento').end,
-                    `$ ${parseFloat(descuento).toLocaleString('es-MX')}`
-                ]).columnGap(10).alignment('right').end
-            );
-
-            pdf.add(
-                new Columns([
-                    new Txt('I.V.A.').end,
-                    `$ ${parseFloat(iva).toLocaleString('es-MX')}`
-                ]).columnGap(10).alignment('right').end
-            );
-
-            pdf.add(
-                new Columns([
-                    new Txt('Total').end,
-                    `$ ${isNaN(total) ? parseFloat(subTotal).toLocaleString('es-MX') : parseFloat(total).toLocaleString('es-MX')}`
-                ]).columnGap(10).alignment('right').end
-            );
-
-            pdf.add(new Txt('\n').end);
-            pdf.add(new Txt('\n').end);
-
-            pdf.add(new Txt(`${textNum}  PESOS 00/100 M.N`).end);
-
-            // Crea y descarga el PDF solo si la imagen está lista
-            if (isImageReady) {
-                pdf.create().download('detalles_pedido_cliente.pdf');
-            }
-        } catch (error) {
-            console.error('Error al generar el PDF:', error);
-        }
+   
     };
 
     return (
