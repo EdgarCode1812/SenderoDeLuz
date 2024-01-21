@@ -1,0 +1,43 @@
+.active {
+    font-size: 25px !important;
+    font-family: 'Futura' !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    transition: font-size .5s, color .5s !important;
+
+}
+.noActive{
+    font-size: 20px !important;
+    font-family: 'Futura' !important;
+    color: #dfdada !important;
+}
+
+.active img{
+  width: 90%;
+  transition: width.5s !important;
+
+}
+.noActive img{  
+    width: 80%;
+}
+
+
+/* Contenedor de opciones */
+.bg-options {
+    position: relative;
+    background-color: #1B2431;
+    min-height: calc(100vh - 56px);
+    position: sticky;
+    top: 0; 
+    z-index: 2; 
+    overflow-y: hidden; 
+}
+
+/* Contenedor de acciones */
+.bg-actions {
+    position: relative;
+    overflow-y: auto; 
+    height: 100%; 
+    z-index: 1; 
+}
+

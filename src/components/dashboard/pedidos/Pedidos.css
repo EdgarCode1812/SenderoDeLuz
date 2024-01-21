@@ -1,0 +1,85 @@
+.product-description {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333; 
+    text-align: left; 
+    padding: 8px; 
+    margin: 0; 
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff; 
+    text-align: center; 
+    padding: 8px;
+    margin: 0; 
+  }
+
+  .btn-img-menos:hover{
+    transform: scale(1.1);
+  }
+  .btn-img-mas:hover{
+    transform: scale(1.1);
+  }
+  
+
+  /*Tabla*/
+
+  /*Tabla recurso confiable*/
+.table-position-pedidos {
+  padding: 0;
+  overflow: auto;
+  max-height: 30vh;
+  /* Resta la altura del encabezado */
+}
+
+table {
+  width: 100% !important;
+}
+
+.table-pedidos tbody a {
+  text-decoration: none !important;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.table-pedidos tbody a:hover {
+  background-color: #0056b3;
+}
+
+
+.tabla-pedidos thead {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  /* Asegúrate de ajustar esto */
+  background-color: #003a70;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.tabla-pedidos tbody {
+  width: 100%;
+  background-color: #F7F7F7;
+  color: black;
+  z-index: 1;
+}
+
+.font-bold{
+  font-weight: bold;
+}
+
+.bg-pendiente{
+  background-color: rgb(236, 236, 101);
+}
+.bg-cancelado{
+  background-color: rgb(243, 67, 67);
+}
+.bg-entregado{
+  background-color: rgb(42, 161, 42);
+}

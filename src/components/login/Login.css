@@ -1,0 +1,109 @@
+.con-ins-login {
+    color: white;
+    width: 50%;
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px 2px #1b24318a;
+}
+
+.con-ins-login img {
+    width: 120px;
+}
+
+.con-ins-login p {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.con-ins-login h1 {
+    font-size: 35px;
+    display: inline-block;
+    color: #1C4FF2;
+    font-family: 'Weekend Mood';
+
+}
+
+.form-group-login {
+    margin-bottom: 20px;
+    color: #1C4FF2;
+    font-family: 'Futura';
+    font-weight: 500;
+}
+
+.llisting-login {
+    height: 30px;
+    padding: 8px 15px;
+    border-color: transparent transparent #1C4FF2;
+    width: 100%;
+    color: black;
+    background-color: transparent;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+}
+
+.llisting-login:focus,
+.llisting-login:focus-within {
+    border-color: transparent transparent #1c4ef263 transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-login {
+    border-color: transparent;
+    background-color: rgb(225, 225, 247);
+    border-radius: 20px;
+    color: #7c90e7dc;
+    font-size: 20px;
+    font-family: 'Futura';
+    font-weight: 500;
+}
+
+.btn-login:hover {
+    background-color: #7c90e7ef;
+    border-color: transparent;
+    color: white;
+}
+
+.alert-error-login {
+    background-color: rgba(255, 0, 0, 0.575);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.alert-error-login p {
+    color: #f2f2f2;
+    font-family: 'Futura';
+    font-weight: bold;
+   
+}
+
+.show-error-login {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+
+/**modo responsivo/
+/* Estilos para tablets (768px a 1024px de ancho) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .con-ins-login {
+        width: 100%;
+    }
+}
+
+/* Estilos  en dispositivos móviles (768px o menos de ancho) */
+@media (max-width: 768px) {
+    .con-ins-login {
+        width: 100%;
+    }
+
+    .con-ins-login h1 {
+        font-size: 40px;
+    }
+}
+
+/* Estilos para el logo en dispositivos móviles (350px o menos de ancho) */
+@media (max-width: 350px) {}

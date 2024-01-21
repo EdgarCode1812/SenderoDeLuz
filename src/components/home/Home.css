@@ -1,0 +1,39 @@
+/* Seccion1.css */
+.seccion1-container {
+    margin-top: 0px;
+    background-image: url("/public/img/fondoSendero.jpg");
+    background-size: cover;
+    background-position: top; 
+    width: 100%;
+    height: calc(100vh - 66px);    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+.carrusel {
+    width: 60%;
+    height: calc(100vh - 66px);
+  }
+  
+  .carousel-content {
+    margin-top: 200px;
+    background-color: transparent;
+    color: #090B0F;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  .carousel-content h3 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-content p {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  
+  
+  
