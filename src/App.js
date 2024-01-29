@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import LoginPage from './pages/LoginPage'
+import Noticias from './pages/Noticias'
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './utils/ProtectedRoute';
 import { LocalStorageService } from './services/LocalStorageService';
@@ -23,6 +24,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/Login' element={<LoginPage />} />
+          <Route path='/Noticias' element={<Noticias />} />
           <Route path='/' element={<Home />} />
           <Route element={<ProtectedRoute redirection='/Login'/>}>
             <Route path='/PanelDeControl' element={<Dashboard />} />

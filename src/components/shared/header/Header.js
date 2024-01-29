@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 import { LocalStorageService } from '../../../services/LocalStorageService';
 import { useNavigate } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
@@ -23,7 +24,7 @@ export default function Header() {
         <Navbar style={{ backgroundColor: '#7FB1E6' }} variant="dark" sticky="top" expand="lg">
             <Container fluid>
                 <Navbar.Brand>
-                    <Image src="/img/logoSendero.png" width={50} alt="" /> {isMobile ? '' : 'FRATERNIDAD SENDERO DE LUZ'}
+                    <Link to='/' style={{textDecoration:'none'}}><Image src="/img/logoSendero.png" width={50} alt="" /> {isMobile ? '' : 'FRATERNIDAD SENDERO DE LUZ'}</Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -34,9 +35,9 @@ export default function Header() {
                         <button className="btn-signOut me-md-4 m-1 pt-1 pb-1 ps-3 pe-3">
                             Psicoterapia gratuita
                         </button>
-                        <button className="btn-signOut me-md-4 m-1 pt-1 pb-1 ps-3 pe-3">
+                        <Link to='/Noticias'><button className="btn-signOut me-md-4 m-1 pt-1 pb-1 ps-3 pe-3">
                             Noticias
-                        </button>
+                        </button></Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
